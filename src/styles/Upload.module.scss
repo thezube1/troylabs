@@ -1,0 +1,42 @@
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.fileUploadWrapper {
+  display: inline-block;
+  position: relative;
+  .fileUploadInput {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .fileUploadButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    }
+  }
+}
